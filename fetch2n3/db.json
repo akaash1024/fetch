@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "text": "Read JS",
+      "status": false
+    },
+    {
+      "id": "2",
+      "text": "Read npm",
+      "status": true
+    },
+    {
+      "id": "10",
+      "text": "Add",
+      "status": false
+    },
+    {
+      "id": "11",
+      "text": "Learn Langauge",
+      "status": false
+    },
+    {
+      "id": "12",
+      "text": "Hello Akash",
+      "status": false
+    },
+    {
+      "id": 10,
+      "text": "Noe",
+      "status": false
+    }
+  ]
+}

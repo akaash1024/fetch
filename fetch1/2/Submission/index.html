@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fetch 2</title>
+    <style>
+
+        #show {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin-top: 5%;
+            margin-right: 5%;
+            margin-left: 5%;
+            grid-gap: 20px;
+        }
+
+        #show > div{
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #cecece;
+            margin: 10px;
+        }
+
+        img {
+            width: 90%;
+            height: 225px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="fetchUsers">Users</button>
+        <div id="show" style="border: 3px solid red;">Data will appear her</div>
+    </div>
+</body>
+
+<script src="./index.js"></script>
+</html>

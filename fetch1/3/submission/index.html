@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movie Search App</title>
+    <style>
+
+        #show {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin-top: 5%;
+            margin-right: 5%;
+            margin-left: 5%;
+            grid-gap: 20px;
+        }
+
+        #show > div{
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #cecece;
+            margin: 10px;
+        }
+
+        img {
+            width: 90%;
+            height: 225px;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="movieInput" placeholder="Enter movie name">
+        <button id="getMovieButton" type="submit">Get</button>
+        <hr>
+        <div id="show" style="border: 1px solid red;"></div>
+    </div>
+
+</body>
+
+<script src="./index.js"></script>
+</html>

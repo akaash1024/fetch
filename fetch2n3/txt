@@ -1,0 +1,16 @@
+https://www.npmjs.com/package/json-server
+
+for chekc versions 
+node -v
+npm -v
+npx -v
+
+//steps
+npm init -y
+//npm install json-server
+
+
+
+npx json-server db.json
+npx json-server db.json --port=8080 //for change like django 
+
