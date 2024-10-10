@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "id": "10",
+      "text": "meena",
+      "status": true
+    },
+    {
+      "id": "10",
+      "text": "shlini",
+      "status": false
+    },
+    {
+      "id": "10",
+      "text": "aaa",
+      "status": false
+    },
+    {
+      "id": "10",
+      "text": "mmmm",
+      "status": false
+    },
+    {
+      "id": "10",
+      "text": "akash",
+      "status": false
+    },
+    {
+      "id": "10",
+      "text": "shshshshshh",
+      "status": false
+    },
+    {
+      "id": "10",
+      "text": "sdsdsdjsdjj",
+      "status": false
+    }
+  ]
+}
