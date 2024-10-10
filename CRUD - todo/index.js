@@ -25,6 +25,7 @@ const createPagination = ((totalPages)=>{
 
 
 
+
 const displayTodos = (todos) => {
     todosContainer.innerHTML = "";
     todos.forEach(element => {
@@ -65,6 +66,7 @@ const displayTodos = (todos) => {
       fetchTodos()
     })
 
+    
     subDiv.append(status,toggleButton,deleteButton)
 
     div.append(todoItem,subDiv)
@@ -76,7 +78,10 @@ const displayTodos = (todos) => {
 
 
 const input = document.querySelector("input")
-const button = document.getElementById("add-todo").addEventListener("click",addTodo)
+// const button = document.getElementById("add-todo").addEventListener("click",addTodo)
+const button = document.getElementById("add-todo").addEventListener("click",()=>{
+  addTodo() //in case, want to pass para,
+})
 
 async function addTodo(){
     const todo = input.value;
@@ -93,7 +98,7 @@ async function addTodo(){
             },
             body: JSON.stringify(
                 {
-                    "id":String(id),
+                    // "id":String(id), //json gives itself
                     "text":todo,
                     "status":false
                 },  
@@ -114,7 +119,7 @@ let filterButton = document.querySelector('#filterButton')
 let sortButton = document.querySelector('#sortButton')
 
 sortButton.addEventListener("click",()=>{
-  fetchTodos("isCompleted=false")
+  fetchTodos("status=false")
 });
 
 filterButton.addEventListener("click",()=>{
@@ -135,7 +140,7 @@ async function fetchTodos(filterQuery){
         createPagination(data.pages)
     } catch(err){
         console.log("Error",err);
-    }
+    } 
 }
 fetchTodos()
 
