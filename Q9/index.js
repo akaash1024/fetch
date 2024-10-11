@@ -1,11 +1,38 @@
-const displayContainer = document.querySelector('.displayContainer')
+const productsContainer = document.querySelector('.productsContainer')
+const filterByCategory = document.querySelector('#filterByCategory')
+const sortByPrice = document.querySelector('#sortByPrice')
 
 
+filterByCategory.addEventListener("change",(event)=>{
+    // let filterQueries= event.target.value;
+    // console.log(filterQuery);
+    fetchingData(`?category=${encodeURIComponent(event.target.value)}`)
+})
 
+sortByPrice.addEventListener("change",()=>{
+    let sortingQuery = event.target.value;
+
+    switch (sortingQuery) {
+        case "byLow":
+            fetchingData(`?_sort=price`)
+            break;
+        case "byHigh":
+            fetchingData(`?_sort=-price`)
+            break
+        case "asc":
+            fetchingData(`?_sort=rating.rate`)
+            break;
+        case "desc":
+            fetchingData(`?_sort=-rating.rate`)
+        default:
+            break;
+    }
+    
+})
 
 //display
 const displayData = ((data)=>{
-    displayContainer.innerHTML = "";
+    productsContainer.innerHTML = "";
 
     data.forEach(element => {
 
@@ -32,33 +59,22 @@ const displayData = ((data)=>{
         card.appendChild(cardPrice);
         card.appendChild(cardRating);
 
-        displayContainer.appendChild(card)
+        productsContainer.appendChild(card)
         
     });
 })
 
 
-
-
-
-
-
-
-
-
 //fetching 
-
-async function fetchingData() {
+async function fetchingData(filterQuery) {
+    const apiURL = filterQuery ? `http://localhost:3000/products${filterQuery}` : `http://localhost:3000/products`;
     try {
-        const res = await fetch('http://localhost:3000/products');
+        const res = await fetch(apiURL);
         const data = await res.json();
         // console.log(data); //successfullly get in console.
         displayData(data)
-
-        
     } catch (error) {
         console.log("error",error);
-        
     }
 }
 
