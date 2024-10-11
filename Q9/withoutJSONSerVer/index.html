@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <style>
+
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    background-color: #fff;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.filter-container {
+    margin: 20px;
+}
+
+/* Add more styles as needed */
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <select  id="filterByCategory">
+            <option value="">Choose by category</option>
+            <option value="men's clothing">men's clothing</option>
+            <option value="women's clothing">women's clothing</option>
+            <option value="jewelery">jewelery</option>
+            <option value="electronics">electronics</option>
+
+        </select>
+    
+        <select  id="sortByPrice">
+            <option value="">sort by price </option>
+            <option value="price-high-to-low">High to low</option>
+            <option value="price-low-to-high">low to high</option>
+        </select>
+    </div>
+    <div id="products-container" class="products-container"></div>
+
+   
+</body>
+</html>
+ <script src="index.js"></script> 
