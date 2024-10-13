@@ -1,0 +1,27 @@
+//Higher Order Functions and Passing functions as arguments
+
+js Wikipedia  //https://en.wikipedia.org/wiki/JavaScript
+
+select Js and inspect > 
+console $0 //its bind with the this element
+
+
+//use chrome or browser as debugger
+simple write in console like below,
+
+##suppose want to debug this function //using console
+
+function add(num1,num2){
+	return num1+num2;
+}
+
+function calculator (num1,num2,operator){
+	return operator(num1,num2)
+}
+
+calculator(4,5,add);
+
+
+now, use
+debugger;
+calculator(3,4,add);

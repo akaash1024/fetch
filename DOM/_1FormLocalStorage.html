@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            width: 40%;
+            padding: 20px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+        <h2>Please Signup....</h2>
+        <input id="name" type="text" placeholder="Enter Name" />
+        <input id="email" type="email" placeholder="Enter Email" />
+        <input id="password" type="password" placeholder="Enter Password" />
+        <input type="submit" value="Signup" />
+    </form>
+</body>
+<script>
+    let form = document.getElementById("form");
+    form.addEventListener("submit", () => {
+        // alert("Signup Sucessfull....")
+        //    let name = document.getElementById("name").value;
+        //    let email = document.getElementById("email").value;
+        //    let password = document.getElementById("password").value;
+        event.preventDefault();
+        let name = form.name.value;
+        let email = form.email.value;
+        let password = form.password.value;
+        // console.log(name,password, email)
+        let user = { name, email, password };
+        // console.log(user)
+        let userArr = JSON.parse(localStorage.getItem("userData")) || [];
+        console.log(userArr)
+        userArr.push(user);
+        localStorage.setItem("userData", JSON.stringify(userArr));
+        alert("Signup Sucessfull....");
+        window.location.href = "products.html"
+    });
+</script>
+
+</html>

@@ -124,7 +124,7 @@ async function fetchTodos(filterQuery) {
     const data = await res.json();
     console.log(data);
     displayTodos(data.data);
-    createPagination(data.pages);
+    createPagination(data.pages); //using data.data when we use pages it returns such kinnd object
   } catch (err) {
     console.log("Error", err);
   }

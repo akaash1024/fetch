@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+#userNameInput {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+#submitBtn {
+  padding: 10px 20px;
+  cursor: pointer;
+}

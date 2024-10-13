@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Leanring</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: gold;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <ul class="language">
+        <li>Javascipt</li>
+    </ul>
+
+</body>
+
+
+<script>
+    function addLanguage (langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage("Python")
+    addLanguage("Tyscript")
+
+
+    function addOptimizedAddingLang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptimizedAddingLang("golang")
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

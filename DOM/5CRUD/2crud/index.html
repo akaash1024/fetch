@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+          <div class="row">
+            <h4>Professional DOM Manipulation</h4>
+            <button id="load-data" class="u-full-width button button-primary">Load Data</button>
+          </div>
+      
+          <div class="row">
+            <div class="notifications-wrapper" id="notifications-wrapper"></div>
+            <div class="data-list-wrapper" id="data-list-wrapper">The card is to be shown here.</div>
+            <div class="pagination-wrapper" id="pagination-wrapper"></div>
+          </div>
+      
+          <!-- Form Section for Create/Update/Delete -->
+          <div class="form-section">
+            <h4>User Form</h4>
+            <div>
+              <label for="user-id">ID (Auto-fill for edit)</label>
+              <input type="text" id="user-id" disabled />
+            </div>
+            <div>
+              <label for="user-name">Full Name</label>
+              <input type="text" id="user-name" />
+            </div>
+            <div>
+              <label for="user-email">Email</label>
+              <input type="text" id="user-email" />
+            </div>
+            <div>
+              <button id="save-btn" class="button button-primary">Save</button>
+              <button id="delete-btn" class="button button-danger">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<script src="./index.js"></script>
+
+</html>

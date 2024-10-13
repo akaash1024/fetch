@@ -1,0 +1,30 @@
+//plese dont make unnecessary request Plxzzzzzz
+
+# GET https://640f55c04ed25579dc4c7a34.mockapi.io/employees
+
+
+# ###
+
+# GET https://640f55c04ed25579dc4c7a34.mockapi.io/employees/11
+
+# ###
+
+# POST https://640f55c04ed25579dc4c7a34.mockapi.io/employees
+# Content-Type: application/json
+
+# {
+#   "name": "Akash3",
+#   "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/986.jpg"
+# }
+
+# ###
+
+# PATCH https://640f55c04ed25579dc4c7a34.mockapi.io/employees/140
+# Content-Type: application/json
+
+# {
+#   "name": "JANEY Akash"
+# }
+
+# ###
+# DELETE https://640f55c04ed25579dc4c7a34.mockapi.io/employees/140

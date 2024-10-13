@@ -1,0 +1,42 @@
+
+
+```
+// Data Store Karna: localStorage.setItem('key', 'value');
+localStorage.setItem('username', 'Rahul');
+```
+```
+// Data Retrieve Karna: localStorage.getItem('key');
+let name = localStorage.getItem('username');
+console.log(name);  // Output: Rahul
+```
+```
+// Data Remove Karna (specific key): localStorage.removeItem('key');
+localStorage.removeItem('username');
+```
+```
+// Saara Data Clear Karna: localStorage.clear();
+localStorage.clear();  // Poora local storage clear ho jayega
+```
+## usse case
+```
+// Dark mode ko store karte hain
+localStorage.setItem('theme', 'dark');
+
+// Theme ko wapas retrieve karte hain
+let theme = localStorage.getItem('theme');
+if(theme === 'dark') {
+    console.log("Dark mode enabled");
+} else {
+    console.log("Light mode enabled");
+}
+```
+
+### Note - 
+```
+let user = {name: 'Rahul', age: 25};
+localStorage.setItem('user', JSON.stringify(user));  // Object ko string mein convert karke store karenge
+
+// Retrieve karte waqt wapas object mein convert karenge
+let storedUser = JSON.parse(localStorage.getItem('user'));
+console.log(storedUser.name);  // Output: Rahul
+```

@@ -1,0 +1,46 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between cards */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card > * {
+    margin: 2px;
+  }
+  
+  .card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .save-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 345px;
+  }
+  
+  .save-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .save-button:focus {
+    outline: none;
+  }
+  

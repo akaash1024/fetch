@@ -1,0 +1,23 @@
+#todoContainer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.todoItem {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.todoItem input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+}

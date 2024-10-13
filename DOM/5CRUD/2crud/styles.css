@@ -1,0 +1,174 @@
+/* Reusable styles */
+.capsule {
+  height: 26px;
+  line-height: 26px;
+  border-radius: 10px;
+}
+
+#navbar {
+  border: 1px solid green;
+}
+
+#main_container {
+  display: flex;
+}
+
+.container {
+  margin-bottom: 80px;
+  margin-top: 20px;
+}
+
+.sidebar-one {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.student {
+  width: 260px;
+  height: 450px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.student img {
+  width: 80%;
+  height: 40%;
+  border-bottom: 1px solid gray;
+}
+
+.student div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Cards */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-title {
+  color: #1c1c1c;
+  font-size: 18px;
+}
+
+.card-description {
+  font-size: 15px;
+  color: #696969;
+  line-height: 1.5;
+}
+
+.card-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Form Section */
+.form-section {
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #f9f9f9;
+}
+
+.form-section h4 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.form-section div {
+  margin-bottom: 15px;
+}
+
+.form-section label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-section .button-primary {
+  background-color: #33c3f0;
+  color: white;
+}
+
+.form-section .button-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.form-section button:hover {
+  opacity: 0.9;
+}
+
+/* Media Queries */
+/* @media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+  
+  .form-section {
+    width: 50%;
+    margin: 40px auto;
+  }
+} */
+
+/* load button */
+#load-data {
+  background-color: #33c3f0;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#load-data:hover {
+  background-color: #28a0d1;
+}
+
+#load-data:active {
+  background-color: #1d7aa5;
+  transform: scale(0.98);
+}
