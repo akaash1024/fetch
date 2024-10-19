@@ -42,6 +42,7 @@ function renderTodos() {
 }
 
 // Function to toggle the 'isDone' status of a todo
+
 function toggleTodoDone(id) {
   todos = todos.map((todo) => {
     if (todo.id === id) {
@@ -54,7 +55,7 @@ function toggleTodoDone(id) {
 }
 
 // Function to delete a todo
-function deleteTodo(id) {
+function deleteTodo(id) {     //id = 1,2,3,4  4 
   todos = todos.filter((todo) => todo.id !== id);
   saveTodos();
   renderTodos();
@@ -84,6 +85,9 @@ document.getElementById("add-todo").addEventListener("click", () => {
   if (todoText) {
     addTodo(todoText);
     todoInput.value = ""; // Clear the input field
+  }
+  else{
+    alert("cant be empty")
   }
 });
 

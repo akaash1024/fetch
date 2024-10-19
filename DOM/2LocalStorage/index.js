@@ -1,19 +1,18 @@
 // Load users data from local storage if it exists
 const storedUsers = localStorage.getItem("users");
 if (storedUsers) {
-  users = JSON.parse(storedUsers); // Parse and load the users from local storage
+  let users = JSON.parse(storedUsers); // Parse and load the users from local storage
   console.log(users, "Akash found it");
 } else {
   //in other app wee coulld put emptu arr in such case
-  console.log("Aakash, not found");
+  console.log("Aakash, local storage data not found");
 }
 
 
 
 // Function to create and return a card element
 function createCard(user) {
-  // Create a div element for the card
-  // Add a class "card" to the div
+  // Create a div element for the card & Add a class "card" to the div
   let card = document.createElement("div");
   card.className = "card";
 
@@ -60,7 +59,7 @@ function createCard(user) {
   isActiveCheckbox.checked = user.isActive; // Set the checkbox based on the user's 'isActive' status
   isActiveCheckbox.classList.add("is-active-checkbox"); // Add a class to style later if needed
   isActiveCheckbox.addEventListener("change", function () {
-    user.isActive = isActiveCheckbox.checked; // Update the user object when checkbox state changes
+  user.isActive = isActiveCheckbox.checked; // Update the user object when checkbox state changes
   });
   isActiveLabel.textContent = "Active: "; // Label for the checkbox
   isActiveLabel.appendChild(isActiveCheckbox);
@@ -78,24 +77,9 @@ function createCard(user) {
 
 // Create an array of user objects, each having an id, name, description, and isActive status
 let users = [
-  {
-    id: 1,
-    name: "John Doe",
-    description: "Loves hiking and outdoor adventures.",
-    isActive: true,
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    description: "Enjoys painting and reading.",
-    isActive: false,
-  },
-  {
-    id: 3,
-    name: "Sam Wilson",
-    description: "Avid traveler and coffee enthusiast.",
-    isActive: true,
-  },
+  {id: 1, name: "John Doe", description: "Loves hiking and outdoor adventures.", isActive: true},
+  {id: 2, name: "Jane Smith", description: "Enjoys painting and reading.", isActive: false},
+  {id: 3, name: "Sam Wilson",description: "Avid traveler and coffee enthusiast.",isActive: true},
 ];
 
 // Select the .card-list div where the cards will be appended
@@ -128,7 +112,19 @@ saveButton.addEventListener("click", function () {
 // Append the save button below the card list
 document.body.appendChild(saveButton);
 
-///Adding dark mode
+
+
+
+
+
+
+
+
+
+
+///Adding dark mode - ignore 
+
+
 let body = document.querySelector("body");
 const darkModeBtn = document.createElement("button");
 darkModeBtn.innerText = "Dark Mode";

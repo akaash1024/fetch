@@ -9,19 +9,19 @@
 // 3. **Load Saved Name**: On page load, if a name is saved in `localStorage`, it should be displayed in the text box.
 // 4. **Update Name**: Allow the user to update the saved name by entering a new name and clicking the submit button.
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const userNameInput = document.getElementById("userNameInput");
-//   const submitBtn = document.getElementById("submitBtn");
+document.addEventListener("DOMContentLoaded", function () {
+  const userNameInput = document.getElementById("userNameInput");
+  const submitBtn = document.getElementById("submitBtn");
 
-//   // Load the username from localStorage and set it as the input's value
-//   userNameInput.value = localStorage.getItem("userName") || "";
+  // Load the username from localStorage and set it as the input's value
+  userNameInput.value = localStorage.getItem("userName") || "";
 
-//   // Update localStorage when the submit button is clicked
-//   submitBtn.addEventListener("click", function () {
-//     localStorage.setItem("userName", userNameInput.value);
-//     alert("Username saved!");
-//   });
-// });
+  // Update localStorage when the submit button is clicked
+  submitBtn.addEventListener("click", function () {
+    localStorage.setItem("userName", userNameInput.value);
+    alert("Username saved!");
+  });
+});
 
 
 

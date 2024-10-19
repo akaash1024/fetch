@@ -257,7 +257,7 @@ let products = [
     priceSort.addEventListener('change', applySort);
 
     function applyFilters() {
-        const category = categoryFilter.value;
+        const category = categoryFilter.value;  
         const filteredProducts = products.filter(product => !category || product.category === category);
         displayProducts(filteredProducts);
     }

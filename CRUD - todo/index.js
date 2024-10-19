@@ -27,6 +27,7 @@ const createPagination = (totalPages) => {
   }
 };
 
+
 const displayTodos = (todos) => {
   todosContainer.innerHTML = "";
   todos.forEach((element) => {
