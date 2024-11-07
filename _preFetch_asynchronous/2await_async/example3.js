@@ -5,9 +5,12 @@
 async function fetchData() {
     try {
         console.log("Data fetch kar rahe hain...");
-        const response = await fetch("https://api.example.com/data"); // API call
+
+        const response = await fetch("https://jsonplaceholder.typicode.com/users"); // API call
         const data = await response.json();  // API se result ko JSON mein convert kar rahe hain
+
         console.log("Data mila:", data);
+        
     } catch (error) {
         console.log("Error aayi:", error);
     }

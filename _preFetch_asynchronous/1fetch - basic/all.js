@@ -1,4 +1,4 @@
-//===================================================\\
+
 
 //synchronous code:
 function syncFunction() {
@@ -8,7 +8,8 @@ function syncFunction() {
   }
   
   syncFunction();
-  
+
+//===================================================\\  
 
 //Converted to asynchronous with a callback:
 
@@ -19,7 +20,3 @@ setTimeout(() => {
 }, 1000);  // This will run after 1 second
 
 console.log("Third");
-
-
-
-//===================================================\\
