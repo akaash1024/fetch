@@ -32,7 +32,7 @@ async function fetchProduct() {
         console.log("Error",err);
     }
 }
-fetchProduct()
+// fetchProduct()
 
 // >>>>>>>>>>>>>//Method 2
 
@@ -77,8 +77,7 @@ fetchProduct()
 //     })
 
 //     const data = await res.json();
-//     console.log(data, "data");
-    
+//     console.log(data, "data");    
 // }
 
 // postUser()
@@ -106,23 +105,23 @@ fetchProduct()
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PUT
 
-// const login = async () => {
-//     const res = await fetch("https://reqres.in/api/users/2",{
-//         method: "PUT", 
-//         headers: {
-//             "content-type": "application/json"
-//         },
-//         body: JSON.stringify({
-//             "name": "test put", 
-//             "job": "test put job"
-//         })
-//     })
+const login = async () => {
+    const res = await fetch("https://reqres.in/api/users/2",{
+        method: "PUT", 
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            "name": "test put", 
+            "job": "test put job"
+        })
+    })
 
-//     const data = await res.json();
-//     console.log(data, "data");
+    const data = await res.json();
+    console.log(data, "data");
     
-// }
+}
 
-// login()
+login()
 
 // >>Pending make delete in line 113 //NEED to check I am stop here because of getting delayy and need to post in GIT too, 
