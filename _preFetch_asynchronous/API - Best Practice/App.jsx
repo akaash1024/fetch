@@ -29,13 +29,15 @@ function App() {
 
   function createUserCard(user) {
     return (
-      <div key={user.id}>
+      <div>
         <Card 
+        key={user.id}
         name={user.name}
         username={user.username}
         email={user.email}
         web={user.website}
-        ></Card>
+        >
+        </Card>
       </div>
     );
   }

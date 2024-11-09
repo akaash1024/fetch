@@ -5,7 +5,7 @@ const sortByPrice = document.querySelector('#sortByPrice')
 
 filterByCategory.addEventListener("change",(event)=>{
     // let filterQueries= event.target.value;
-    // console.log(filterQuery);
+    // console.log(filterQueries);
     fetchingData(`?category=${encodeURIComponent(event.target.value)}`)
 })
 

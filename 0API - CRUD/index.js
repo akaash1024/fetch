@@ -19,10 +19,10 @@ deleteButton.addEventListener("click", deleteUser);
 function fetchAndRenderUsers() {
   fetch(apiURL)
     .then((response) => response.json())
-    .then((data) => {
+    .then((users) => {
       mainSection.innerHTML = "";
-      console.log(data)
-      let cardList = getCardList(data);
+      console.log(users)
+      let cardList = getCardList(users);
       mainSection.append(cardList);
     })
     .catch((error) => console.error("Error fetching users:", error));
