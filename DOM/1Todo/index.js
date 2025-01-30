@@ -167,26 +167,3 @@ let todoData =  [
   };
   
   processigTodos(todoData);
-  
-
-
-
-
-
-
-  // let checkBtn = document.getElementsByTagName('input');
-  
-  // // Loop through each input element in the HTMLCollection
-  // for (let i = 0; i < checkBtn.length; i++) {
-  //   // Add an event listener to each checkbox
-  //   checkBtn[i].addEventListener("change", function(e) {
-  //     if (checkBtn[i].checked){
-  //       checkBtn[i].parentElement.classList.add('completed');
-  //     }
-  //     else{
-  //       checkBtn[i].parentElement.classList.remove('completed');
-  //     }
-  //   });
-  // }
-  
-  

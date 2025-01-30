@@ -123,7 +123,8 @@ async function fetchTodos(filterQuery) {
   try {
     const res = await fetch(apiURL);
     const data = await res.json();
-    console.log(data);
+    console.log("from here",data);
+    console.log("from here",data.data);
     displayTodos(data.data);
     createPagination(data.pages); //using data.data when we use pages it returns such kinnd object
   } catch (err) {

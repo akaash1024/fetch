@@ -7,26 +7,61 @@ let userIdInput = document.getElementById("user-id");
 let userNameInput = document.getElementById("user-name");
 let userEmailInput = document.getElementById("user-email");
 
+//need to chekck  below line
+const paginationContainer = document.querySelector(".pagination");
+
+let curretnPage = 1;
+let perPage = 10;
 
 let apiURL = "https://640f55c04ed25579dc4c7a34.mockapi.io/employees";
+
+const createPagination = (totalPages) => {
+  paginationContainer.innerHTML = "";
+
+  for (let i = 1; i <= totalPages; i++) {
+    const PageButton = document.createElement("button");
+    PageButton.innerText = i;
+
+    PageButton.addEventListener("click", () => {
+      currentPage = i;
+      // fetchTodos();
+    });
+
+    paginationContainer.appendChild(PageButton);
+  }
+};
+
+const fetchAndRenderUsers = async () => {
+  try {
+    let response = await fetch(apiURL);
+    let users = await response.json();
+    mainSection.innerHTML = "";
+    console.log(users);
+    createPagination(Math.ceil(users.length));
+    let cardList = getCardList(users);
+    mainSection.append(cardList);
+  } catch (error) {
+    console.log("Error fetching users:", error);
+  }
+};
 
 // Event listeners
 loadDataButton.addEventListener("click", fetchAndRenderUsers);
 saveButton.addEventListener("click", saveUser);
 deleteButton.addEventListener("click", deleteUser);
 
-// Fetch & render users
-function fetchAndRenderUsers() {
-  fetch(apiURL)
-    .then((response) => response.json())
-    .then((users) => {
-      mainSection.innerHTML = "";
-      console.log(users)
-      let cardList = getCardList(users);
-      mainSection.append(cardList);
-    })
-    .catch((error) => console.error("Error fetching users:", error));
-}
+// Fetch & render users - using above async function
+// function fetchAndRenderUsers() {
+//   fetch(apiURL)
+//     .then((response) => response.json())
+//     .then((users) => {
+//       mainSection.innerHTML = "";
+//       console.log(users)
+//       let cardList = getCardList(users);
+//       mainSection.append(cardList);
+//     })
+//     .catch((error) => console.error("Error fetching users:", error));
+// }
 
 // Create card list
 function getCardList(users) {
@@ -84,9 +119,12 @@ function saveUser() {
     fetch(`${apiURL}/${userId}`, {
       method: "PUT",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name: userName, email: userEmail })
+      body: JSON.stringify({
+        name: userName,
+        email: userEmail,
+      }),
     })
       .then((res) => res.json())
       .then(() => {
@@ -98,9 +136,9 @@ function saveUser() {
     fetch(apiURL, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name: userName, email: userEmail })
+      body: JSON.stringify({ name: userName, email: userEmail }),
     })
       .then((res) => res.json())
       .then(() => {
@@ -116,7 +154,7 @@ function deleteUser() {
 
   if (userId) {
     fetch(`${apiURL}/${userId}`, {
-      method: "DELETE"
+      method: "DELETE",
     }).then(() => {
       alert("User deleted successfully!");
       clearForm();
